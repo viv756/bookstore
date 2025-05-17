@@ -8,6 +8,8 @@ import userRoute from "./route/user.route.js"
 
 const app = express();
 
+dotenv.config();
+
 app.use(cors({
   origin: ["http://localhost:5173", "https://bookstore-1-b4ao.onrender.com"],
   credentials: true,
@@ -17,7 +19,6 @@ app.options("*", cors());
 
 app.use(express.json())
 
-dotenv.config();
 
 const PORT = 4001
 
