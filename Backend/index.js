@@ -17,7 +17,7 @@ const PORT = 4001
 
 // connect to mongodb
 try {
-  mongoose.connect( `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@mongodb:27017/course-goals?authSource=admin`, {});
+  mongoose.connect( `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGO_URI}/course-goals?authSource=admin`, {});
   console.log("coneected to mongodb");
 } catch (error) {
   console.log("error:", error);
