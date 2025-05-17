@@ -23,7 +23,7 @@ const PORT = 4001
 
 // connect to mongodb
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Mongodb connected successfully");
   })
