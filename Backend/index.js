@@ -22,12 +22,14 @@ dotenv.config();
 const PORT = 4001
 
 // connect to mongodb
-try {
-  mongoose.connect( `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGO_URI}?authSource=admin`, {});
-  console.log("coneected to mongodb");
-} catch (error) {
-  console.log("error:", error);
-}
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log("Mongodb connected successfully");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // defining routes
 app.use("/book", bookRoute);
