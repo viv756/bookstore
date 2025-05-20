@@ -6,6 +6,13 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+
+# Declare build-time argument
+ARG VITE_BACKEND_URL
+
+# Set env so Vite can access it during build
+ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
+
 RUN npm run build
 
 # Serve with NGINX
