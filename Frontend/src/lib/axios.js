@@ -5,6 +5,6 @@ console.log(import.meta.env);
 
 
 export const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL,
+  baseURL: "https://bookstore-rpsf.onrender.com",
   withCredentials: true,
 });
