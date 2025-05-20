@@ -4,6 +4,8 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import AuthProvider from "./context/AuthProvider.jsx";
 
+// Trigger rebuild
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <AuthProvider>
